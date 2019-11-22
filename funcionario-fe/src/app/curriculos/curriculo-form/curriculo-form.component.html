@@ -1,0 +1,25 @@
+<form [formGroup]="curriculoForm" (ngSubmit)="onSubmit(curriculoForm.value)">
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Nome" formControlName="nome" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Contato" formControlName="contato" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Area" formControlName="area" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Carga Horaria" formControlName="cargaHoraria" required> 
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Salario" formControlName="salario" required>
+        </mat-form-field>
+
+    </div>
+    <button class="button" type="submit">Enviar</button>
+</form>

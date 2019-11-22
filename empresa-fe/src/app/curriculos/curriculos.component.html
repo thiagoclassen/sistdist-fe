@@ -1,0 +1,8 @@
+<!-- <input matInput placeholder="Area" [(ngModel)]="area">
+<input matInput placeholder="salario" type="number" [(ngModel)]="salario" > -->
+
+<mat-nav-list>
+    <mat-list-item *ngFor="let curriculo of ogCurriculos" routerLink="./{{curriculo.id}}">
+       <a matLine >{{ curriculo.nome }} - {{ curriculo.area }}</a>
+    </mat-list-item>
+  </mat-nav-list>

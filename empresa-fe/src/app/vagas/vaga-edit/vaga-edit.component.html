@@ -1,0 +1,27 @@
+<form [formGroup]="vagaForm" (ngSubmit)="onSubmit(vagaForm.value)">
+    <div>
+        <mat-form-field>
+            <input matInput placeholder="Empresa" formControlName="empresa" [readonly]="!edit" ng>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Contato" formControlName="contato" [readonly]="!edit">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Area" formControlName="area" [readonly]="!edit">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Carga Horaria" formControlName="cargaHoraria" [readonly]="!edit">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Salario" formControlName="salario" [readonly]="!edit">
+        </mat-form-field>
+
+    </div>
+
+    <button mat-raised-button color="primary" *ngIf="!edit; else elseBlock" (click)="toggleEdit()">Editar</button>
+    <ng-template #elseBlock><button mat-raised-button color="primary" type="submit">Enviar</button></ng-template>
+</form>
